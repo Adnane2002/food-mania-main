@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDataFetch } from "../hook/useDataFetch";
 
 const RecipeItem = ({ handleFavourites, saveItem }) => {
@@ -95,9 +95,9 @@ const RecipeItem = ({ handleFavourites, saveItem }) => {
                 <button className="text-red-50 p-3 px-8 rounded-lg text-xs uppercase font-medium tracking-wider mt-2 bg-gradient-to-br from-orange-400 to-orange-500  inline-block  shadow-md  shadow-orange-200 hover:shadow-lg hover:shadow-orange-300">
                   Get Directions
                 </button>
-                <button className="text-red-50 p-3 px-8 rounded-lg text-xs uppercase font-medium tracking-wider mt-2 bg-gradient-to-br from-red-400 to-red-500  inline-block  shadow-md  shadow-red-200 hover:shadow-lg hover:shadow-red-300">
+                <Link to="/" className="text-red-50 p-3 px-8 rounded-lg text-xs uppercase font-medium tracking-wider mt-2 bg-gradient-to-br from-red-400 to-red-500  inline-block  shadow-md  shadow-red-200 hover:shadow-lg hover:shadow-red-300">
                   Go Home
-                </button>
+                </Link>
               </div>
             </div>
           </div>
