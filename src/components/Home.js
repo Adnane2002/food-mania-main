@@ -8,7 +8,7 @@ const Home = ({ recipes, loading, error }) => {
       {recipes.length === 0 && !loading && !error ? (
         <div>
           <p className="lg:text-4xl text-xl text-center text-red-300 font-semibold">
-            Nothing to show, please search something!
+          Hungry? Start by searching for a recipe or an ingredient. Have fun!
           </p>
           <FryingPan />
         </div>
