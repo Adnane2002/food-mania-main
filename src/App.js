@@ -68,29 +68,6 @@ function App() {
 
     navigate("/favourites");
   };
-
-  const handleRandomRecipe = async () => {
-    try {
-      setLoading(true);
-      const res = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/random`);
-      if (!res.ok) throw new Error("Failed to fetch random recipe");
-
-      const data = await res.json();
-      const randomRecipeId = data?.id;
-
-      if (randomRecipeId) {
-        const recipeId = `/recipe-item/${randomRecipeId}`;
-        navigate(recipeId);
-      } else {
-        throw new Error("No random recipe found");
-      }
-    } catch (error) {
-      setError(error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
     localStorage.setItem("recipeData", JSON.stringify(saveItem));
   }, [saveItem]);
@@ -114,8 +91,6 @@ function App() {
                 setRecipes={setRecipes}
                 loading={loading}
                 error={error}
-                handleRandomRecipe={handleRandomRecipe}
-                setError={setError}
               />
             }
           />

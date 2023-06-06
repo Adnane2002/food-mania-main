@@ -26,7 +26,7 @@ const Navbar = ({
           value={searchItem}
           onChange={(e) => setSeachItem(e.target.value)}
           className="bg-white/75 p-3 px-8 rounded-full outline-none lg:w-96 shadow-lg shadow-red-100 focus:shadow-red-200 "
-          placeholder="Search Items....(try pizza)"
+          placeholder="Search Items(try pizza, carrots ...)"
         />
       </form>
       <ul className="flex gap-5 ">
