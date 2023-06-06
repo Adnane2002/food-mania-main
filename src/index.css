@@ -9,12 +9,12 @@ body {
 }
 
 ::selection {
-  background-color: teal;
+  background-color: rgb(128, 30, 0);
   color: #f8eaea;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = ({
   handleSearch,
@@ -15,9 +15,9 @@ const Navbar = ({
 
   return (
     <nav className="navbar flex justify-between items-center py-8 container mx-auto flex-col lg:flex-row gap-5 lg:gap-0 ">
-      <h2 className="brand text-2xl font-semibold  lowercase italic text-3xl ">
+      <Link to="/" className="brand text-2xl font-semibold  lowercase italic text-3xl ">
         <span className=" text-yellow-500">Food</span> <span className=" text-red-500 ">Heaven</span>
-      </h2>
+      </Link>
 
       <form className="search-bar" onSubmit={handleSearch}>
         <input
@@ -26,7 +26,7 @@ const Navbar = ({
           value={searchItem}
           onChange={(e) => setSeachItem(e.target.value)}
           className="bg-white/75 p-3 px-8 rounded-full outline-none lg:w-96 shadow-lg shadow-red-100 focus:shadow-red-200 "
-          placeholder="Search Items...."
+          placeholder="Search Items....(try pizza)"
         />
       </form>
       <ul className="flex gap-5 ">
